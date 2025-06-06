@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 300 20% 99%;
+    --foreground: 280 10% 20%;
+
+    --card: 300 20% 99%;
+    --card-foreground: 280 10% 20%;
+
+    --popover: 300 20% 99%;
+    --popover-foreground: 280 10% 20%;
+
+    --primary: 280 60% 45%;
+    --primary-foreground: 300 20% 99%;
+
+    --secondary: 340 80% 85%;
+    --secondary-foreground: 340 50% 30%;
+
+    --accent: 45 80% 60%;
+    --accent-foreground: 45 30% 20%;
+
+    --muted: 280 10% 95%;
+    --muted-foreground: 280 5% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 10% 85%;
+    --input: 280 10% 85%;
+    --ring: 280 60% 45%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 280 30% 10%;
+    --foreground: 300 10% 95%;
+
+    --card: 280 30% 12%;
+    --card-foreground: 300 10% 95%;
+
+    --popover: 280 30% 12%;
+    --popover-foreground: 300 10% 95%;
+
+    --primary: 280 60% 55%;
+    --primary-foreground: 300 10% 95%;
+
+    --secondary: 340 50% 40%;
+    --secondary-foreground: 340 10% 95%;
+
+    --accent: 45 70% 50%;
+    --accent-foreground: 45 10% 95%;
+
+    --muted: 280 20% 20%;
+    --muted-foreground: 280 5% 65%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 280 20% 30%;
+    --input: 280 20% 30%;
+    --ring: 280 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom styling for feminine touches */
+.card {
+  @apply border-opacity-50 shadow-sm hover:shadow-md transition-shadow duration-300;
+}
+
+.btn-accent {
+  @apply bg-accent text-accent-foreground hover:bg-accent/90;
+}
+
+.gradient-heading {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+}
+
+.feminine-border {
+  @apply border-2 border-secondary/30 rounded-lg;
+}
+
+.gold-accent {
+  @apply text-accent font-medium;
+}
+
